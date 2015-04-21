@@ -28,6 +28,9 @@
 
 // Layout
 .polaroid {
+	border-radius: 10%;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+	background: linear-gradient(15deg, #fff, #aaa);
 	float: left;
 	width: 170px; 
 	height: 180px;
@@ -40,10 +43,12 @@
 // Stavy
 .polaroid {
 	background-color: rgba(100%, 100%, 100%, .7);
+	transition: 300ms;
 	
 	&:hover,
 	&:focus,
 	&:active {
+		transform: scale(1.25);		
 	  	background-color: #fcf883;
 		background-color: rgba(100%, 100%, 100%, 1);	
 	}
