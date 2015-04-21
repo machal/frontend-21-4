@@ -49,8 +49,17 @@ table th {
   color: #999;
 }
 .head {
+  zoom: 1;
   padding: 2em 0;
   text-align: center;
+}
+.head:before,
+.head:after {
+  content: "";
+  display: table;
+}
+.head:after {
+  clear: both;
 }
 .foot {
   padding: 2em 0;
@@ -65,8 +74,8 @@ table th {
   width: 100%;
   padding: 5px;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .infobox {
   color: #000;
@@ -138,6 +147,12 @@ table th {
   font-weight: normal;
 }
 .polaroid {
+  -webkit-border-radius: 10%;
+          border-radius: 10%;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(75deg, #ffffff, #aaaaaa);
+  background: linear-gradient(15deg, #ffffff, #aaaaaa);
   float: left;
   width: 170px;
   height: 180px;
@@ -148,10 +163,15 @@ table th {
 }
 .polaroid {
   background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: 300ms;
+          transition: 300ms;
 }
 .polaroid:hover,
 .polaroid:focus,
 .polaroid:active {
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
   background-color: #fcf883;
   background-color: #ffffff;
 }
@@ -163,3 +183,5 @@ table th {
 .polaroid .polaroid:active .head {
   color: black;
 }
+
+/*# sourceMappingURL=index.css.map */
